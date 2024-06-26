@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<head> <title>blank</title>
+<style>
+    *{
+        margin:0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        background-color:black;
+        color:white;
+
+    }
+    .open{
+        color:black;
+        background:white;
+        font-size:x-large;
+        border:none;
+        border-radius:2px;
+    }
+    .sidebar{
+        display: block;
+        font-size:x-large;
+        line-height:2.5rem;
+        border:1px solid grey;
+        border-top-color:white;
+        width:13rem;
+        padding:1rem;
+        text-align:center;
+        text-transform: capitalize;
+        position:absolute;
+        top:0;
+        right:0;
+        visibility: hidden;
+        opacity:0;
+        transition:transform 1s, opacity 1s ease-in-out;
+    }
+    .close{
+        visibility:visible;
+        opacity:1;
+
+    }
+</style>
+</head>
+<body>
+    <button class="open">&equiv;</button>
+    <section class="sidebar">
+        <h4>Shop &blacktriangledown;</h4>
+        <h4>sustainability</h4>
+        <h4>About</h4>
+        <h4>Contact</h4>
+        <h4>Cart</h4>
+    </section>
+
+    <script>
+        let btn = document.querySelector(".open");
+        let sidebar = document.querySelector(".sidebar");
+        let close = document.querySelector(".close");
+
+        btn.addEventListener("click", ()=>{
+            sidebar.classList.toggle("close")
+        })
+    </script>
+</body>
+</html>
