@@ -2,6 +2,7 @@
     margin:0;
     padding: 0;
     box-sizing:border-box;
+    font-family: sans-serif;
 }
 body{
     font-size:65%;
@@ -13,6 +14,7 @@ button{
     cursor:pointer;
 }
 .header{
+    padding:1.5rem;
     background-color: aliceblue;
     color:black;
     display:flex;
@@ -23,22 +25,30 @@ button{
     top:0;
     height:4rem; 
     z-index: 1;
+    box-shadow:0px 0px 5px rgba(37, 36, 36, 0.863)
 }
 
-.header h1{
-    font-size: 1.6rem;
+.header img{
+    width:80px;
+    height:25px;
 }
 .sidebar{
     display:flex;
     justify-content: space-between;
     
 }
-.sidebar h4{
+.sidebar li{
     margin-right: 2rem;
     font-size:1.3rem;
     font-weight: 100;
-    font-family: Georgia, 'Times New Roman', Times, serif;
     text-transform: capitalize;
+    list-style-type: none;
+    cursor:pointer;
+}
+.sidebar li:hover{
+    text-decoration: underline;
+
+
 }
 .open{
     display:none;
@@ -46,9 +56,10 @@ button{
 .ceramic{
     margin-top:4rem;
     color:white;
-    background-image: url("about.png");
+    background-image: url("./pic/about.png");
     background-size:cover;
-    width:98vw;
+    background-position: center;
+    width:100vw;
     height:90vh;
     text-align: center;
     display: flex;
@@ -118,8 +129,9 @@ button{
     height:14rem;
 }
 .decor{
-    background-image: url(decor.jpeg);
+    background-image: url("./pic/decor.jpeg");
     background-size:cover;
+    background-position:center;
     width:98vw;
     min-height: 70vh;
     text-align: center;
@@ -193,7 +205,8 @@ button{
 
 }
 .news{
-    background-image: url(newsletter.png);
+    background-position:center;
+    background-image: url("./pic/newsletter.png");
     background-size:cover;
     width:98vw;
     height: 80vh;
@@ -241,8 +254,8 @@ button{
     width:8rem;
 }
 .instagram{
-    margin-top:2rem;
-    margin-bottom:2rem;
+    padding:1.5rem;
+    margin:2rem 1rem;
     padding:2rem 0 2rem 0;
     opacity:0;
     visibility:hidden;
@@ -297,7 +310,6 @@ button{
 }
 .footer{
     height:fit-content;
-    max-height:100px;
     width:100%;
     background-color: rgb(170, 168, 168);
     color: rgb(170, 168, 168);
@@ -306,6 +318,27 @@ button{
     margin-top:2rem;
     font-weight: 600;
     transition:color 1s, font-weight 9s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding:1rem 1rem;
+
+
+}
+.footer a{
+    color:white;
+    font-size:medium
+}
+.footer span{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width:90%;
+    
+}
+.footer p {
+    font-size:medium
 
 }
 .footer.loaded{
@@ -313,7 +346,7 @@ button{
     font-weight:100;
     transform:translateY(0px);
 }
-@media screen and (max-width:550px){
+@media screen and (max-width:600px){
     .ceramic{
         height:70vh;
     }
@@ -323,14 +356,14 @@ button{
     .tit{
         display:flex;
         justify-content:space-between;
-        width:30%;
+        width:100%;
 
     }
     .open{
         color:black;
         background:white;
         font-size:x-large;
-        border:1px solid black;
+        box-shadow: 0px 0px 5px rgba(37, 35, 35, 0.603);
         padding:0 1rem;
         margin:0 1rem 0 1rem;
         border-radius:2px;
@@ -353,7 +386,8 @@ button{
         right:0;
         visibility: hidden;
         opacity:0;
-        transition:visibility 1s, opacity 1s ease-in-out;
+        transition:visibility 0.3s, opacity 0.3s ease;
+        box-shadow: 2px 5px 8px grey;
     }
     .close{
         visibility:visible;
